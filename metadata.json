@@ -1,0 +1,16 @@
+{
+  "name": "puppetmodule-w32time",
+  "version": "0.1.0",
+  "author": "andrewheberle",
+  "summary": "Configures Windows Time Service",
+  "license": "Apache-2.0",
+  "source": "https://github.com/andrewheberle/puppetmodule-w32time",
+  "project_page": "https://github.com/andrewheberle/puppetmodule-w32time",
+  "issues_url": "https://github.com/andrewheberle/puppetmodule-w32time/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {"name":"puppetlabs-registry","version_requirement":">= 1.1.2"}
+  ],
+  "data_provider": "hiera"
+}
+

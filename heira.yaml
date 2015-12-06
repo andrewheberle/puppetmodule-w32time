@@ -1,0 +1,6 @@
+---
+version: 4
+datadir: data
+heirachy:
+  - name: "common"
+    backend: yaml

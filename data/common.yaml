@@ -1,0 +1,6 @@
+---
+ # Defaults for domain joined workstation
+w32time::service_name: w32tm
+w32time::synctype: NT5DS
+w32time::ntpservers:
+  - time.windows.com,0x01
