@@ -1,6 +1,41 @@
 ---
- # Defaults for domain joined workstation
+ # Common Defaults
+w32time::system_type: member
 w32time::service_name: w32tm
+w32time::registry_config: HKLM\System\CurrentControlSet\Services\W32Time\Config
+w32time::registry_paramters: HKLM\System\CurrentControlSet\Services\W32Time\Parameters
+w32time::registry_ntpclient: HKLM\System\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+w32time::registry_ntpserver: HKLM\System\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+ # W32Time\Parameters
 w32time::synctype: NT5DS
-w32time::ntpservers:
-  - time.windows.com,0x01
+ # W32Time\Config
+w32time::annouceflags: 10
+w32time::eventlogflags: 2
+w32time::frequencycorrectrate: 4
+w32time::holdperiod: 5
+w32time::largephaseoffset: 50000000
+w32time::localclockdispersion: 10
+w32time::maxallowedphaseoffset: 300
+w32time::maxnegphasecorrection: 4294967295
+w32time::maxpollinterval: 15
+w32time::maxposphasecorrection: 4294967295
+w32time::minpollinterval: 10
+w32time::phasecorrectrate: 1
+w32time::polladjustfactor: 5
+w32time::spikewatchperiod: 900
+w32time::updateinterval: 30000
+ # W32Time\TimeProviders\NtpClient
+w32time::ntpclientallownonstandardmodecombinations: 1
+w32time::ntpclientcompatibilityflags: 2147483648
+w32time::ntpclientcrosssitesyncflags: 2
+w32time::ntpclientenabled: 1
+w32time::ntpclienteventlogflags: 1
+w32time::ntpclientinputprovider: 1
+w32time::ntpclientlargesampleskew: 3
+w32time::ntpclientresolvepeerbackoffminutes: 15
+w32time::ntpclientresolvepeerbackoffmaxtimes: 7
+w32time::ntpclientspecialpollinterval: 3600
+ # W32Time\TimeProviders\NtpServer
+w32time::ntpserverallownonstandardmodecombinations: 1
+w32time::ntpserverenabled: 1
+w32time::ntpserverinputprovider: 1

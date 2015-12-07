@@ -1,0 +1,6 @@
+---
+ # Domain Controller Specific Defaults
+ # W32Time\Config
+w32time::maxpollinterval: 10
+w32time::minpollinterval: 6
+w32time::updateinterval: 100

@@ -1,0 +1,14 @@
+---
+ # Primary Domain Controller (PDC) Emulator Specific Defaults
+ # W32Time\Parameters
+w32time::synctype: NTP
+w32time::ntpservers:
+  - 0.au.pool.ntp.org
+  - 1.au.pool.ntp.org
+  - 2.au.pool.ntp.org
+  - 3.au.pool.ntp.org
+ # W32Time\Config
+w32time::annouceflags: 5
+w32time::maxpollinterval: 10
+w32time::minpollinterval: 6
+w32time::updateinterval: 100
