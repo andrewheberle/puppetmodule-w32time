@@ -1,15 +1,13 @@
 ---
  # Common Defaults
+w32time::service_name: w32time
 w32time::system_type: member
-w32time::service_name: w32tm
-w32time::registry_config: HKLM\System\CurrentControlSet\Services\W32Time\Config
-w32time::registry_paramters: HKLM\System\CurrentControlSet\Services\W32Time\Parameters
-w32time::registry_ntpclient: HKLM\System\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
-w32time::registry_ntpserver: HKLM\System\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
  # W32Time\Parameters
 w32time::synctype: NT5DS
+w32time::ntpservers:
+  - time.windows.com,0x1
  # W32Time\Config
-w32time::annouceflags: 10
+w32time::announceflags: 10
 w32time::eventlogflags: 2
 w32time::frequencycorrectrate: 4
 w32time::holdperiod: 5
